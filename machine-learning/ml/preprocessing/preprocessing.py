@@ -73,7 +73,7 @@ def retrieve_labelled_instances(dataset, refactoring: LowLevelRefactoring, is_tr
 
     # apply some scaling to speed up the algorithm
     if SCALE_DATASET and scaler is None:
-        x, scaler = perform_fit_scaling(x)
+        x, scaler = perform_fit_scaling(x) 
     elif SCALE_DATASET and scaler is not None:
         x = perform_scaling(x, scaler)
 
